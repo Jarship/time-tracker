@@ -7,8 +7,8 @@ const TimeTable = ({ children }) => {
     <div className="Time-table">
       <div>
         <p>Description</p>
-        <p>Start</p>
-        <p>Stop</p>
+        <p>Start time</p>
+        <p>End time</p>
         <p>Duration</p>
       </div>
       {children}
@@ -22,7 +22,7 @@ TimeTable.propTypes = {
 
 export const Activities = ({ timer: { description, startTime, stopTime }, ...otherProps }) => {
   const start = new moment(startTime);
-  const [stop, setStop] = useState(new moment(stopTime || ''));
+  const [stop, setStop] = useState(new moment(stopTime) || '');
 
   useEffect(() => {
     let timer;
@@ -39,7 +39,7 @@ export const Activities = ({ timer: { description, startTime, stopTime }, ...oth
     <div className="Activity" {...otherProps}>
       <p>{description}</p>
       <p>{start.format('MMM Do, h:mm:ss a')}</p>
-      <p>{stop.format('MMM Do, h:mm:ss a')}</p>
+      <p>{stopTime && stop.format('MMM Do, h:mm:ss a')}</p>
       <p>{elapsed.humanize()}</p>
     </div>
   );
