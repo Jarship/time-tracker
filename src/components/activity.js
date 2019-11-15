@@ -12,7 +12,7 @@ const ActivityGrid = ({ activities, selectActivity }) => {
     }
   };
   return (
-      <Panel>
+      <Panel className="Lower Panel">
       <h2>Activities</h2>
       <TimeTable>
         {activities.map((item, key) => (
@@ -21,7 +21,7 @@ const ActivityGrid = ({ activities, selectActivity }) => {
       </TimeTable>
     </Panel>
   );
-      };
+};
 
 ActivityGrid.propTypes = {
   activities: PropTypes.array.isRequired,

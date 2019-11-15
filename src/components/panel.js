@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Panel ({ children }) {
+function Panel ({ children, ...otherProps }) {
   return (
-    <section className="Panel">
+    <section className="Panel" {...otherProps}>
       {children}
     </section>
   )

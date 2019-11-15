@@ -25,3 +25,7 @@ Demonstrate design and implementation aspects you feel are important in a softwa
 
 # Publish
 Publish your implementation under your own github account.
+
+
+# Extras
+I have included the ability to click on a unfinished activity in the table below to select it when on the 'Stop current timer' tab 
