@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TimeClock from './components/timeclock';
 import ActivityGrid from './components/activity';
+import Description from './components/description';
 import './App.css';
 import { getTimers, getActiveTimers, stopTimer, createTimer } from './lib/storage';
 
@@ -35,6 +36,7 @@ function App() {
       <div className="Panel-holder">
         <TimeClock active={active} setInactive={updateTimer} addActivity={newTimer} current={current} setCurrent={setCurrent}/>
         <ActivityGrid activities={timers} selectActivity={handleCurrentChange} />
+        <Description />
       </div>
     </div>
   );

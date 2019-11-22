@@ -1,9 +1,7 @@
 .App {
   text-align: center;
   background-color: #808080;
-  height: 100vh;
   padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 .Panel {
@@ -16,6 +14,7 @@
   display: flex;
   flex-direction: column;
   align-Items: center;
+  margin-bottom: 5px;
 }
 
 .Lower {
@@ -26,6 +25,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  justify-content: space-evenly;
 }
 
 .Time-table {
@@ -35,7 +36,6 @@
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: 80%;
   width: 95%;
 }
@@ -148,4 +148,9 @@
 .Activity:hover p {
   background-color: #B0B0B0;
   cursor: pointer;
+}
+
+.Description {
+  text-align: center;
+  font-size: 16px;
 }
